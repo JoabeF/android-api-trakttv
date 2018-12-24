@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.uwetrottmann.trakt5:trakt-java:5.9.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uwetrottmann.trakt5/trakt-java/5.9.0/dac6510128417ba30fe63a435a18be2c5f9144ff/trakt-java-5.9.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uwetrottmann.trakt5/trakt-java/5.9.0/aac4fd0f0511f7cb05e5d1369baa2dd05c3382b9/trakt-java-5.9.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

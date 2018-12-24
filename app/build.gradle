@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+def AAVersion = '27.1.1'
+def BBVersion = '4.4.0'
+def CCVersion = '5.9.0'
+
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.traktjo.traktjo"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+    productFlavors {
+    }
+    buildToolsVersion '28.0.3'
+}
+
+dependencies {
+    //RV
+    implementation "com.android.support:cardview-v7:$AAVersion"
+    implementation "com.android.support:recyclerview-v7:$AAVersion"
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    //android annotations
+    annotationProcessor "org.androidannotations:androidannotations:$BBVersion"
+    implementation "org.androidannotations:androidannotations-api:$BBVersion"
+    //Sprint dependecies
+    implementation 'org.springframework.android:spring-android-rest-template:2.0.0.M3'
+    //trakt tv Java
+    implementation("com.uwetrottmann.trakt5:trakt-java:$CCVersion") {
+        exclude group: 'org.threeten', module: 'threetenbp'
+    }
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //listener network
+    implementation 'com.treebo:internetavailabilitychecker:1.0.1'
+    //basico
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:$AAVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
