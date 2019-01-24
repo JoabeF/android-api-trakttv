@@ -1,4 +1,4 @@
-Trakt Tv App - consumo de API's de seriados. 
+Esse App consome a API da Trakt-Tv, com objetivo de exibir as séries mais famosas do momento.  
 
 É comum no app:
 
@@ -7,4 +7,4 @@ SPRING REST TEMPLATE;
 HTTPSENTITY;
 HTTPSHEADES.
 RECYCLER_VIEW;
-OBJETOS.s
+OBJETOS.
